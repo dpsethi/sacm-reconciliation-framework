@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="SACM_OpenstackXML2021-04-09 11:48:59" max_length="40" name="x_tdbf2_sacm_recon_openstack_invenory_xml" sizeclass="0" type="collection">
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=blueprint" label="blueprint" max_length="194" name="u_blueprint" type="string"/>
+    <element extends="sys_import_set_row" label="SACM_OpenstackXML2022-01-31 07:09:15" max_length="40" name="x_tdbf2_sacm_recon_openstack_invenory_xml" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=blueprint" label="blueprint" max_length="204" name="u_blueprint" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=cloud" label="cloud" max_length="40" name="u_cloud" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=cloudify" label="cloudify" max_length="142" name="u_cloudify" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=compute_node" label="compute_node" max_length="40" name="u_compute_node" type="string"/>
