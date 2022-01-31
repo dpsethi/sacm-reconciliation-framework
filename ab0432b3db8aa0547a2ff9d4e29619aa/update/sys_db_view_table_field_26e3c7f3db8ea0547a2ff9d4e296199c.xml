@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table_field">
+    <sys_db_view_table_field action="INSERT_OR_UPDATE">
+        <field>substatus</field>
+        <sys_class_name>sys_db_view_table_field</sys_class_name>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-02-07 19:19:39</sys_created_on>
+        <sys_id>26e3c7f3db8ea0547a2ff9d4e296199c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>substatus</sys_name>
+        <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+        <sys_update_name>sys_db_view_table_field_26e3c7f3db8ea0547a2ff9d4e296199c</sys_update_name>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-02-07 19:19:39</sys_updated_on>
+        <table>alm_hardware</table>
+        <view_table display_value="alm_hardware">6b72077fdb4ea0547a2ff9d4e2961987</view_table>
+    </sys_db_view_table_field>
+</record_update>

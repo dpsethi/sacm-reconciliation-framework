@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="data configuration" max_length="40" name="x_tdbf2_sacm_recon_data_configuration" sizeclass="2" type="collection">
+        <element label="CMDB Mapped Field" max_length="50" name="cmdb_mapped_field" type="string"/>
+        <element label="Description" mandatory="true" max_length="4000" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="openstack" label="Reconcile With" mandatory="true" max_length="100" name="name" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Azure" sequence="0" value="azure"/>
+                <element inactive_on_update="false" label="HPNA" sequence="1" value="hpna"/>
+                <element inactive_on_update="false" label="Openstack" sequence="2" value="openstack"/>
+                <element inactive_on_update="false" label="Qualys" sequence="3" value="qualys"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="u_name" label="Reconciliation Field" mandatory="true" max_length="40" name="reconciliation_field" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="u_name" sequence="0" value="u_name"/>
+                <element inactive_on_update="false" label="u_uuid" sequence="1" value="u_uuid"/>
+                <element inactive_on_update="false" label="u_serial_number" sequence="2" value="u_serial_number"/>
+                <element inactive_on_update="false" label="u_asset_tag" sequence="3" value="u_asset_tag"/>
+                <element inactive_on_update="false" label="u_ip_address" sequence="4" value="u_ip_address"/>
+                <element inactive_on_update="false" label="u_correlation_id" sequence="5" value="u_correlation_id"/>
+                <element inactive_on_update="false" label="u_internal_name" sequence="6" value="u_internal_name"/>
+            </choice>
+        </element>
+    </element>
+</database>

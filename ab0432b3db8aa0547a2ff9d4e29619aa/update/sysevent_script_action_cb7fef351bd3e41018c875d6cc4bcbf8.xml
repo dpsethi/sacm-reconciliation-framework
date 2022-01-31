@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_tdbf2_sacm_recon.openstack.event</event_name>
+        <name>cmdb to openstack</name>
+        <order>100</order>
+        <script><![CDATA[removeResultsRecords();
+doReconciliation();
+
+function removeResultsRecords() {
+    var grResults = new GlideRecord('x_tdbf2_sacm_recon_results');
+	var parm1 = event.parm1.toString();
+    grResults.addQuery('set', 'STARTSWITH', parm1); //parm1 = openstack, azure, other data sources etc..
+    grResults.query();
+    gs.info('ScriptAction - SACM reconciliation - purging total records found in results ' + grResults.getRowCount());
+    grResults.next();
+    grResults.deleteMultiple();
+}
+
+function doReconciliation() {
+    //loop thru server table non retired - direction of reconciliation is cmdb ==> openstack
+    //get settings from configuration table , which field to use for reconciliation
+    var parm1 = event.parm1.toString();
+    var parm2 = event.parm2.toString();
+
+    var openstackTable = 'x_tdbf2_sacm_recon_openstack_invenory_xml';
+    var azureTable = ''; //to be configured
+    var grsettings = new GlideRecord('x_tdbf2_sacm_recon_data_configuration');
+    grsettings.addQuery('name', parm1); //parm1 holds either openstack or azure etc..
+    grsettings.query();
+    grsettings.next();
+    var queryfield = grsettings.reconciliation_field;
+    var grfield = grsettings.cmdb_mapped_field;
+    gs.info('dps3 - value in parm1 is ' + parm1 + ' :grfield is ' + grfield);
+
+    var gr = new GlideRecord('cmdb_ci_server');
+    gr.addQuery('asset.install_status', '!=', 7); //retired
+
+    if (parm1 == 'openstack') {
+        gr.addQuery('u_virtual_server_technology', 'Cloud');
+    }
+    if (parm1 == 'azure') {
+        gr.addQuery('u_virtual_server_technology', 'Azure Public Cloud');
+    }
+    //gr.addNotNullQuery('u_openstack_uid');
+    gr.setLimit(5000);
+    gr.query();
+    gs.info('dps3 count' + gr.getRowCount());
+    while (gr.next()) {
+        var grfield1 = gr.getValue(grfield);
+        gs.info('dps3 - value in grfield1 is ' + grfield1);
+        var gr2 = new GlideRecord(openstackTable);
+
+        //gr2.addQuery('u_name', gr.name);
+        gr2.addQuery(queryfield, grfield1);
+        gr2.query();
+        gs.info('dps3 - encoded query gr2 is ' + gr2.getEncodedQuery());
+        //      	gs.info("row2 - value in u_openstack_uid is " + gr.u_openstack_uid);
+        //gs.info('dps4 - finding by name: ' + gr.name);
+
+        var gr3 = new GlideRecord('x_tdbf2_sacm_recon_results');
+
+        if (gr2.next()) {
+            //update fields on results table
+
+            //gs.info('row2 count on openstack table for uuid ' + gr.u_openstack_uid + " count is" + gr2.getRowCount());
+            gr3.initialize();
+            gr3.set = grsettings.name;
+            gr3.open_ci = gr2.sys_id;
+            //gr3.name = gr2.u_name;
+            gr3.name = "Record Found";
+            gr3.cmdb_ci = gr.sys_id;
+            gr3.serial = gr.serial_number;
+            gr3.environment = gr.u_os_environment;
+            gr3.dac = gr.u_deployment_application_code;
+            gr3.cmdb_reconciled_field = grfield;
+            gr3.other_data_source_reconciled_field = queryfield;
+            gr3.reconciliation_direction = "CMDB ==> Other Data Source";
+            gr3.insert();
+
+        } else {
+
+
+            //gs.info('row2 count on openstack table for uuid ' + gr.u_openstack_uid + " count is" + gr2.getRowCount());
+            gr3.initialize();
+            gr3.set = grsettings.name;
+            gr3.name = "Not Found - Target for Retired";
+            gr3.cmdb_ci = gr.sys_id;
+            gr3.environment = gr.u_os_environment;
+            gr3.dac = gr.u_deployment_application_code;
+            gr3.cmdb_reconciled_field = grfield;
+            gr3.other_data_source_reconciled_field = queryfield;
+            gr3.reconciliation_direction = "CMDB ==> Other Data Source";
+            gr3.insert();
+
+
+
+        }
+    }
+
+}]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-04-04 20:42:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cb7fef351bd3e41018c875d6cc4bcbf8</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>cmdb to openstack</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+        <sys_update_name>sysevent_script_action_cb7fef351bd3e41018c875d6cc4bcbf8</sys_update_name>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-04-06 17:38:46</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

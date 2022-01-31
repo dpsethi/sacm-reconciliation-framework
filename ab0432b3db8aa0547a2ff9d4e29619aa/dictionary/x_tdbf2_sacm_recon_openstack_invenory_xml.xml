@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="SACM_OpenstackXML2021-04-09 11:48:59" max_length="40" name="x_tdbf2_sacm_recon_openstack_invenory_xml" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=blueprint" label="blueprint" max_length="194" name="u_blueprint" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=cloud" label="cloud" max_length="40" name="u_cloud" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=cloudify" label="cloudify" max_length="142" name="u_cloudify" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=compute_node" label="compute_node" max_length="40" name="u_compute_node" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=contact" label="contact" max_length="168" name="u_contact" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=cost_center" label="cost_center" max_length="40" name="u_cost_center" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=created" label="created" max_length="40" name="u_created" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=creator" label="creator" max_length="40" name="u_creator" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=deployment" label="deployment" max_length="192" name="u_deployment" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=environment" label="environment" max_length="40" name="u_environment" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=external_ip" label="external_ip" max_length="40" name="u_external_ip" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=external_name" label="external_name" max_length="161" name="u_external_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=internal_ip" label="internal_ip" max_length="158" name="u_internal_ip" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=internal_name" label="internal_name" max_length="157" name="u_internal_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=it_number" label="it_number" max_length="40" name="u_it_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=mal_code" label="mal_code" max_length="40" name="u_mal_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=name" label="name" max_length="40" name="u_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=os_name" label="os_name" max_length="215" name="u_os_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=status" label="status" max_length="40" name="u_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=uuid" label="uuid" max_length="40" name="u_uuid" type="string"/>
+    </element>
+</database>

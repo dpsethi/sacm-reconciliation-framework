@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>dps query database view</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var dbgr = new GlideRecord('x_tdbf2_sacm_recon_cmdb_to_openstack_by_name');
+dbgr.query();
+dbgr.next();
+gs.info('dps database view - x_tdbf2_sacm_recon_cmdb_to_openstack_by_name - query record count is ' + dbgr.getRowCount());
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-04-02 19:00:46</sys_created_on>
+        <sys_id>32e40dd51b5b285018c875d6cc4bcb16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dps query database view</sys_name>
+        <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+        <sys_update_name>sys_script_fix_32e40dd51b5b285018c875d6cc4bcb16</sys_update_name>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-04-02 19:00:46</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

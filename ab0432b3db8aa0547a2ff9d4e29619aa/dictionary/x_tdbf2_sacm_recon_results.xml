@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="results" max_length="40" name="x_tdbf2_sacm_recon_results" sizeclass="13" type="collection">
+        <element label="Asset Tag" max_length="100" name="asset_tag" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="CMDB_CI" max_length="32" name="cmdb_ci" reference="cmdb_ci" type="reference"/>
+        <element label="CMDB Reconciled Field" max_length="50" name="cmdb_reconciled_field" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="DAC" max_length="32" name="dac" reference="cmdb_ci_service_discovered" type="reference"/>
+        <element label="Environment" max_length="40" name="environment" type="string"/>
+        <element label="IP Address" max_length="255" name="ip_address" type="string"/>
+        <element label="Recon Status" max_length="100" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="OPEN_CI" max_length="32" name="open_ci" reference="x_tdbf2_sacm_recon_openstack_invenory_xml" type="reference"/>
+        <element label="Other Data Source Reconciled Field" max_length="50" name="other_data_source_reconciled_field" type="string"/>
+        <element label="Reconciliation Direction" max_length="100" name="reconciliation_direction" type="string"/>
+        <element label="Serial" max_length="100" name="serial" type="string"/>
+        <element label="Set" max_length="40" name="set" type="string"/>
+        <index name="index">
+            <element name="cmdb_ci"/>
+        </index>
+        <index name="index2">
+            <element name="dac"/>
+        </index>
+        <index name="index3">
+            <element name="open_ci"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table_field">
+    <sys_db_view_table_field action="INSERT_OR_UPDATE">
+        <field>u_lifecycle_status</field>
+        <sys_class_name>sys_db_view_table_field</sys_class_name>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-02-08 18:17:00</sys_created_on>
+        <sys_id>1c1ff7ccdb9224d49a5d1c76489619dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_lifecycle_status</sys_name>
+        <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+        <sys_update_name>sys_db_view_table_field_1c1ff7ccdb9224d49a5d1c76489619dc</sys_update_name>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-02-08 18:17:00</sys_updated_on>
+        <table>u_td_product_standard</table>
+        <view_table display_value="u_td_product_hw">ae3a7b48db5224d49a5d1c764896199a</view_table>
+    </sys_db_view_table_field>
+</record_update>

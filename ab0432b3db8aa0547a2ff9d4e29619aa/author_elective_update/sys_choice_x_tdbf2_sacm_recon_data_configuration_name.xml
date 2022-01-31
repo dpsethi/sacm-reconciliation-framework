@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="name" table="x_tdbf2_sacm_recon_data_configuration" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-04-05 13:54:39</sys_created_on>
+            <sys_id>1f2cd7021bdba81018c875d6cc4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>name</sys_name>
+            <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+            <sys_update_name>sys_choice_x_tdbf2_sacm_recon_data_configuration_name</sys_update_name>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-04-05 13:54:39</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Azure</label>
+            <language>en</language>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-04-05 13:55:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fc3c178e1b9ba81018c875d6cc4bcb3d</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-04-05 14:07:18</sys_updated_on>
+            <value>azure</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HPNA</label>
+            <language>en</language>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-04-05 13:55:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>995cdfca1b9ba81018c875d6cc4bcb3b</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-04-05 14:07:18</sys_updated_on>
+            <value>hpna</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Openstack</label>
+            <language>en</language>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-04-05 13:54:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fc2c57021bdba81018c875d6cc4bcbff</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-04-05 14:07:18</sys_updated_on>
+            <value>openstack</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>name</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Qualys</label>
+            <language>en</language>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-04-05 13:56:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4a6c53421bdba81018c875d6cc4bcb2e</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-04-05 14:07:18</sys_updated_on>
+            <value>qualys</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="data_format" table="x_tdbf2_sacm_recon_data_configuration" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>data_format</element>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-02-07 18:47:04</sys_created_on>
+            <sys_id>1f7c3effdb8aa0547a2ff9d4e29619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>data_format</sys_name>
+            <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+            <sys_update_name>sys_choice_x_tdbf2_sacm_recon_data_configuration_data_format</sys_update_name>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-02-07 18:47:04</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>data_format</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CSV</label>
+            <language>en</language>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-02-07 18:47:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1d7c32f3db0ea0547a2ff9d4e29619e6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-02-07 18:47:11</sys_updated_on>
+            <value>csv</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>data_format</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Excel</label>
+            <language>en</language>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-02-07 18:47:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1b7c3e7bdbcaa0547a2ff9d4e29619a5</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-02-07 18:47:27</sys_updated_on>
+            <value>Excel</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>data_format</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>XML</label>
+            <language>en</language>
+            <name>x_tdbf2_sacm_recon_data_configuration</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+            <sys_created_on>2021-02-07 18:47:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5e8c3e37db0ea0547a2ff9d4e2961979</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+            <sys_updated_on>2021-02-07 18:47:37</sys_updated_on>
+            <value>XML</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

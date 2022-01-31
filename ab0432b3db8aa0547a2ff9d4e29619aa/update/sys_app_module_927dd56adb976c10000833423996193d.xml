@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="SACM Reconciliation Framework2">76157eb7db8aa0547a2ff9d4e29619d0</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title>Azure Inventory Upload</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>35</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>/com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=91fb15e6db976c100008334239961957</query>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-04-06 17:58:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>927dd56adb976c10000833423996193d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Azure Inventory Upload</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+        <sys_update_name>sys_app_module_927dd56adb976c10000833423996193d</sys_update_name>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-04-06 17:58:52</sys_updated_on>
+        <timeline_page/>
+        <title>Azure Inventory Upload</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

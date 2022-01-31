@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="INSERT_OR_UPDATE">
+        <access_type>restricted</access_type>
+        <active>true</active>
+        <allow_edit>false</allow_edit>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <can_cancel>false</can_cancel>
+        <category/>
+        <checked_out/>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p>Attach openstack XML file to this request and submit to get uploaded to openstack inventory table</p>
+<p>Note: existing data will get overwritten</p>]]></description>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Upload Openstack XML</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner/>
+        <picture/>
+        <post_insert_script/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=b21dbb781b5b245018c875d6cc4bcbb2&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <published_ref/>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <redirect_url>generated_record</redirect_url>
+        <request_method/>
+        <roles/>
+        <save_options/>
+        <save_script/>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template/>
+        <script><![CDATA[//insert record in sys data source
+insertRecord();
+processFile();
+function insertRecord(){
+current.import_set_table_name = "x_tdbf2_sacm_recon_openstack_invenory_xml";
+current.name = 'SACM_OpenstackXML'  + new GlideDateTime().getDisplayValue();
+current.format = 'XML';
+current.xpath_root_node = '/TD_OpenStack_Inventory/vm';
+current.header_row = 1;
+    current.sheet_number = 1;
+    current.file_retrieval_method = "Attachment";
+    current.type = "File";
+current.insert();
+}
+function processFile(){
+	//scheduled_import_set.do?sys_id=f3c872b7dbcaa0547a2ff9d4e29619f3
+	gs.addInfoMessage("Now processing the xml feed");
+current.update();
+var redirectStr = "sys_import.do?"; // the URI
+redirectStr += "import_source=data_source"; // this is a Data Source import
+redirectStr += "&sysparm_data_source=" + current.sys_id; // the sys_id of this
+redirectStr += "&sysparm_tablename=" + current.import_set_table_name; // always create the same test
+redirectStr += "&sysparm_recreate_table=true"; // falswe will not overwrite existing
+redirectStr += "&sysparm_tablelabel=" + current.name;
+redirectStr += "&create_new_module=ON";
+redirectStr += "&sysparm_extends=sys_import_set_row"; // always extends this
+redirectStr += "&selected_application=import_sets";
+gs.setRedirect(redirectStr);
+//gs.setRedirect(current);
+}
+
+]]></script>
+        <short_description>Upload Openstack XML inventory</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state/>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-04-01 19:45:05</sys_created_on>
+        <sys_id>b21dbb781b5b245018c875d6cc4bcbb2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Upload Openstack XML</sys_name>
+        <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+        <sys_update_name>sc_cat_item_producer_b21dbb781b5b245018c875d6cc4bcbb2</sys_update_name>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-04-01 20:21:06</sys_updated_on>
+        <table_name>sys_data_source</table_name>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <view/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="delete_multiple" query="documentkey=b21dbb781b5b245018c875d6cc4bcbb2"/>
+    <fx_price action="delete_multiple" query="id=b21dbb781b5b245018c875d6cc4bcbb2"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="CAD">CAD</currency>
+        <field>price</field>
+        <id>b21dbb781b5b245018c875d6cc4bcbb2</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="CAD">CAD</reference_currency>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-04-01 19:45:05</sys_created_on>
+        <sys_id>ed0680451bdb245018c875d6cc4bcb69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-04-01 19:45:05</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="CAD">CAD</currency>
+        <field>recurring_price</field>
+        <id>b21dbb781b5b245018c875d6cc4bcbb2</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="CAD">CAD</reference_currency>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-04-01 19:45:05</sys_created_on>
+        <sys_id>e10680451bdb245018c875d6cc4bcb6b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-04-01 19:45:05</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

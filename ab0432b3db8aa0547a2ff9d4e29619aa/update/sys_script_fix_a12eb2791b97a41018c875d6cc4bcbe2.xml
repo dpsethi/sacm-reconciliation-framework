@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>SACM perform open n cmdb recon</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[removeResultsRecords();
+doReconciliation();
+function removeResultsRecords(){
+	var grResults = new GlideRecord('x_tdbf2_sacm_recon_results');
+	grResults.addQuery('set','STARTSWITH','Openstack');
+	grResults.query();
+	gs.info('Openstack records found in results ' + grResults.getRowCount());
+	grResults.next();
+	grResults.deleteMultiple();
+}
+
+function doReconciliation(){
+//loop thru server table non retired
+var gr = new GlideRecord('cmdb_ci_server');
+gr.addQuery('hardware_status','!=','Retired');
+gr.addQuery('u_virtual_server_technology','Cloud');
+gr.addNotNullQuery('u_openstack_uid');
+//	gr.setLimit(1000);
+gr.query();
+gs.info('dps3 count' + gr.getRowCount());
+while (gr.next()){
+	var gr2 = new GlideRecord('x_tdbf2_sacm_recon_openstack_invenory_xml');
+	gr2.addQuery('u_name', gr.name);
+	gr2.query();
+//      	gs.info("row2 - value in u_openstack_uid is " + gr.u_openstack_uid);
+	//gs.info('dps4 - finding by name: ' + gr.name);
+
+	while (gr2.next()){
+		//update fields on results table
+		var gr3 = new GlideRecord('x_tdbf2_sacm_recon_results');
+		//gs.info('row2 count on openstack table for uuid ' + gr.u_openstack_uid + " count is" + gr2.getRowCount());
+		gr3.initialize();
+		gr3.set = "Openstack Reconciliation";
+		gr3.open_ci = gr2.sys_id;
+		gr3.name = gr2.u_name;
+		gr3.cmdb_ci = gr.sys_id;
+		gr3.serial = gr.serial_number;
+		gr3.environment = gr.u_os_environment;
+		gr3.dac = gr.u_deployment_application_code;
+		gr3.insert();
+		
+	}
+}
+	
+}
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>SETHID2-P3@TDBFG.com</sys_created_by>
+        <sys_created_on>2021-04-04 17:06:59</sys_created_on>
+        <sys_id>a12eb2791b97a41018c875d6cc4bcbe2</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>SACM perform open n cmdb recon</sys_name>
+        <sys_package display_value="SACM Reconciliation Framework" source="x_tdbf2_sacm_recon">ab0432b3db8aa0547a2ff9d4e29619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SACM Reconciliation Framework">ab0432b3db8aa0547a2ff9d4e29619aa</sys_scope>
+        <sys_update_name>sys_script_fix_a12eb2791b97a41018c875d6cc4bcbe2</sys_update_name>
+        <sys_updated_by>SETHID2-P3@TDBFG.com</sys_updated_by>
+        <sys_updated_on>2021-04-04 20:02:29</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

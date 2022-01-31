@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="SACM_Azure2021-04-06 14:34:19" max_length="40" name="x_tdbf2_sacm_recon_azure_inventory" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Class" label="Class" max_length="40" name="u_class" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Cloud Name" label="Cloud Name" max_length="40" name="u_cloud_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Deployment Application Code" label="Deployment Application Code" max_length="40" name="u_deployment_application_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Device Classification" label="Device Classification" max_length="40" name="u_device_classification" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Environment" label="Environment" max_length="40" name="u_environment" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Environment (M)" label="Environment (M)" max_length="40" name="u_environment__m_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Fully qualified domain name" label="Fully qualified domain name" max_length="40" name="u_fully_qualified_domain_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Fully qualified domain name (N)" label="Fully qualified domain name (N)" max_length="40" name="u_fully_qualif_omain_name__n_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Host Name" label="Host Name" max_length="40" name="u_host_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=IP Address" label="IP Address" max_length="40" name="u_ip_address" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Model ID" label="Model ID" max_length="40" name="u_model_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Name" label="Name" max_length="40" name="u_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Operating System" label="Operating System" max_length="40" name="u_operating_system" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Virtual Server Technology" label="Virtual Server Technology" max_length="40" name="u_virtual_server_technology" type="string"/>
+    </element>
+</database>
