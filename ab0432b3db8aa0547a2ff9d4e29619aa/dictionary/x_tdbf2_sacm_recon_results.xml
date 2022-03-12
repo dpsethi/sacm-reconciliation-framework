@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="results" max_length="40" name="x_tdbf2_sacm_recon_results" sizeclass="13" type="collection">
+    <element label="results" max_length="40" name="x_tdbf2_sacm_recon_results" sizeclass="8" type="collection">
         <element label="Asset Tag" max_length="100" name="asset_tag" type="string"/>
         <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="CMDB_CI" max_length="32" name="cmdb_ci" reference="cmdb_ci" type="reference"/>
         <element label="CMDB Reconciled Field" max_length="50" name="cmdb_reconciled_field" type="string"/>
